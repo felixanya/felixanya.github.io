@@ -1,0 +1,17 @@
+permalink: /:title.html
+title: 简简单单的我,一眼就可以看到本质
+description: "Feix's Blog"
+keywords: programming, data, machine learning, alexandre martins, felixanya
+production_url: http://felixanya.github.io
+pygments: false
+markdown: redcarpet
+redcarpet:
+  extensions: ["tables","with_toc_data", "no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
+author :
+  name : Alexandre Matos Martins
+  github : felixanya
+  twitter : felixanya
+  email: felixanya@gmail.com
+  linkedin: felixanya
+disqus_shortname: felixanya
+analytics: UA-39542235-1
