@@ -4,7 +4,7 @@ title: "Git Ruby Jekyll 第一次"
 description: ""
 category: "code"
 tags: []
-intro: ""
+intro: "Git Ruby Jekyll 第一次"
 ---
 
 记录工作，学习，生活的一点一滴。更多分享，更多交流，更多进步。
