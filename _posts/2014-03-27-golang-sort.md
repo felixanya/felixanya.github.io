@@ -7,7 +7,7 @@ tags: []
 intro: "golang 排序"
 ---
 
-golang srot包
+golang sort包
 
 附上例子
 
