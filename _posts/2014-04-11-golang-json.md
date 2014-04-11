@@ -9,6 +9,7 @@ intro: "golang json 特别说明"
 
 JSON 结构体的特别说明
 json的object的key是项名,但也可以使用项的标签(json struct tag)
+特别注意 空指针会输出null 所以切片就为null
  
 //忽略此项
 
@@ -25,3 +26,51 @@ Field int `json:"myName,omitempty"`
 //json中的key是Field,值为零则忽略
 
 Field int `json:",omitempty"`
+
+
+附上例子
+
+	package test
+
+	import (
+		"encoding/json"
+		"fmt"
+		"testing"
+	)
+
+	type Response struct {
+		Id     int      `json:"id,omitempty"`
+		Name   string   `json:"name,omitempty"`
+		Fruits []string `json:"fruits"`
+	}
+
+	func TestClass(t *testing.T) {
+		res2D := &Response{
+			Id:     0,
+			Name:   "felix",
+			Fruits: []string{"apple", "peach", "pear"}}
+		res2B, _ := json.Marshal(res2D)
+		//输出{"name":"felix","fruits":["apple","peach","pear"]}
+		fmt.Println(string(res2B)) 
+
+		res2D = &Response{
+			Id:     10,
+			Name:   "",
+			Fruits: []string{"apple", "peach", "pear"}}
+		res2B, _ = json.Marshal(res2D)
+		//输出{"id":10,"fruits":["apple","peach","pear"]}
+		fmt.Println(string(res2B)) 
+
+		res2D = &Response{
+			Fruits: []string{"apple", "peach", "pear"}}
+		res2B, _ = json.Marshal(res2D)
+		//输出{"fruits":["apple","peach","pear"]}
+		fmt.Println(string(res2B)) 
+
+		res2D = &Response{
+			Id:   10,
+			Name: "felix"}
+		res2B, _ = json.Marshal(res2D)
+		//输出{"id":10,"name":"felix","fruits":null}
+		fmt.Println(string(res2B)) 
+	}
