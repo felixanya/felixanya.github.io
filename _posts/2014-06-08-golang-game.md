@@ -8,7 +8,8 @@ intro: "golang game of socket"
 ---
 
 以下图片是一个简单的socket的服务
-![http://felixanya.github.com/img/socket.png]
+
+![golang socket](http://felixanya.github.com/img/socket.png)
 
 ## 简要说明
 
