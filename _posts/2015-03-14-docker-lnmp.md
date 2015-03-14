@@ -26,7 +26,8 @@ intro: "docker 构建开发环境lnmp"
 这里的centos6是一个Tag，类似于git的tag，这里的tag可以为你制定一个centos的版本。
 如果你直接pull centos 他会下载一个最新centos下来，就是7版本
 下载完成后，执行docker images命令可以列出你已经下载或者自己构建的image：
-(http://felixanya.github.com/img/d_images.jpg)
+
+![docker images](http://felixanya.github.com/img/d_images.jpg)
 
 
 你可以看到centos6的大小为206MB，以及它的IMAGE ID。 现在我们开始运行一个Container，命令很简单.
@@ -59,17 +60,17 @@ mysql的启动
 	docker run -it -v /usr/local/webserver/mysql:/usr/local/webserver/mysql -v /tmp:/tmp --name mysql -p 3306:3306 local_mysql:v1   /bin/bash
 
 
-(http://felixanya.github.com/img/d_mysql.jpg)
+![docker images](http://felixanya.github.com/img/d_mysql.jpg)
 
 web的启动
 
 	docker run -it -v /usr/local/webserver/mysql:/usr/local/webserver/mysql -v /tmp:/tmp -v /home/share:/data/htdocs -p 82:80 --link mysql:mysql --name web  local_nginx:v1   /bin/bash
 
 
-(http://felixanya.github.com/img/d_nginx.jpg)
+![docker images](http://felixanya.github.com/img/d_nginx.jpg)
 
 
-(http://felixanya.github.com/img/d_ps.jpg)
+![docker ps -a](http://felixanya.github.com/img/d_ps.jpg)
 
 #### 为什么这么多目录挂载
 
