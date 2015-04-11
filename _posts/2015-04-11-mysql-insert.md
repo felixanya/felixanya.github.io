@@ -28,14 +28,14 @@ intro: "浅淡分区游戏的数据合服"
 
 充分利用linux下的多核，所以cpu可能去到百分之300，或百合之500以上
 
-![linux_cpu_1 images](http://felixanya.github.com/img/linux_cpu_1.jpg)
+![linux_cpu_1 images](http://felixanya.github.com/img/linux_cpu_1.png)
 
-![linux_cpu_2 images](http://felixanya.github.com/img/linux_cpu_2.jpg)
+![linux_cpu_2 images](http://felixanya.github.com/img/linux_cpu_2.png)
 
 
 让mysql多线程操作，连接数开大点
 
-![myql images](http://felixanya.github.com/img/mysql_stats.png)
+![myql images](http://felixanya.github.com/img/mysql_stats.jpg)
 
 具体的程序过程
 
